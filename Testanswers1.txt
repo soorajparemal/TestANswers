@@ -1,0 +1,92 @@
+--------------------------------------------------------------------------------                           :: ANSWERS::
+--------------------------------------------------------------------------------
+a) Name of the processor is intel (R) Xeon(R) cpu E5-2650L v3 clocked at 1.80 GHz.   I found this using the command --  cat /proc/cpuinfo | grep 'model name'| uniq    .
+
+
+
+
+b) To find kernel version, i used the commands ' uname -r' and 'cat /proc/version'   ::  The kernel version is linux version 3.13.0 -85 -generic.
+
+
+
+
+c) % of disk space used by the root file system is 1.4G.   used the command 'df -hT /home' . df stands for disk filesystem.
+
+
+
+
+d) The name of the device mounted on / is '/dev/vda1' . found this using the 'df -h' command.
+
+
+
+e) Swap memory is 0/0MB . found using several commands such as 'vimstat' , 'top', 'htop' etc...
+
+
+
+f) RAM available to the system is 23096kB(it keeps on varying due to varios running of varios processes ) . It can be found out using varios commands such as 'htop', 'top', 'vmstat -s' etc...
+
+
+
+g) Inode is an entry in inode table ,containing information about a regular file and directory.  Inode is a DATASTRUCTURE on a traditional unix style file system.  inode number(index number) of 'ep.txt' is 1180243 . its found using the command 'ls -il'.A Unix file is "stored" in two different parts of the disk - the data blocks and the inodes.  The data blocks contain the "contents" of the file. The information about the file is stored elsewhere - in the inode.
+
+
+
+h) The size of this file is 1479 . found using 'du -b ep.txt' .
+
+
+
+i)There are 26 block special files in /dev of the sysem . Found using --  'cd /dev | ls -l | grep '^b'| wc '    ...   used the help of grep command and used piping inorder to find the solution.
+
+
+
+j) used the script - 'cat /usr/share/dict/words | awk ' { if ( length > x) {x = length; y = $0 } } END{print y}'  and got the word "electroencephalograph's" . I actually got this script from stackexchange.com . I came to know about awk command from that script and i find it quite interesting. will try to work on this command . 
+
+
+
+k) pid(product identification) number is a unique number that helps identify a hardware or registered software product. Got the cron pid " 934 "by running 'pgrep cron' and initially found that it is running  using 'service crond status'.
+
+
+
+l) The ubuntu version running is ubuntu 14.04.4 LTS .     this can be found using the command 'lsb_release -r' ;which shows just the release number and 'lsb_release -a' for the complete details .
+
+
+
+
+m) There are 3 network interfaces on this machine . They are :: lo:local loopback , eth1:Ethernet HWaddr 04:01:00:e6:93:02  and eth2:Ethernet HWaddr 04:01:00:e6:93:01 . found using the commands 'ifconfig -a' for names and also used 'ip link show' .
+
+
+
+
+n) craeted a directory 'suraj' under /home/guest using mkdir command.
+
+
+
+
+o) The md5 chechsum of the first 120 bytes of the file /bin/ls is - "ca2ce76e34866abo3d496e4cce399390"  I initially copied the first 120 bytes from /bin/ls to afile md5 present in 'suraj' using the 'dd' command. then with the property of piping, calculated the md5 checksum using 'md5sum md5' where the latter md5 is filename .  the script used is ->>                                    "dd if=/bin/ls of=/home/guest/suraj/md5 | md5sum md5"                            <<-.    After a bit of browsing i came to know that chechsum of a file is a simple way to check if the data has become corrupted when being transferred from one place to another . if checksum before = checksum after copying , its unlikely that file is corrupted. MD5 is an algorithm that is used to verify data through the creation of a 128 bit message from data input that is unique for that specific data.  
+
+
+
+
+p) The file foo is created in 'suraj' using the dd command.  "dd if=/dev/null of=foo bs=100 count=1" . foo is 100 bytes long and its content is all zero.
+
+
+
+
+q) Copied using the command "cp /usr/share/dict/words /home/guest/suraj " >
+
+
+
+
+
+r) Done this using the 'tr' command along with piping. used -> "cat words |tr [a-z] [A-Z] > upper_words " .
+   
+                                                                    
+
+
+
+
+
+s) By the help of google, using hexadecimal expansion of 3735928559 i got the word 0 x DEADBEEF . . If i'm right , i guess you are reffering to BJP because of all that conflicts on beef ban :) .
+
+
+--------------------------------------------------------------------------------
