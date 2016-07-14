@@ -1,0 +1,31 @@
+a) 1000110111   Done using 'short division by two with reminder' method.
+b) 237      Done by first dividing the binary into groups of 4 and then multiplying with powers of 2 seperately. Then combine the values to get the hexadecimal value. 
+c) 1067   done using the converting with remainder method.
+d)binary-11111111   hex-ff  using the methods mentioned above.
+e) binary-11111111111111111 hex-ffff.
+f)0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,10,11,12,13.
+g)0,1,2,3,4,5,6,7,10,11,12,13,14,15,16,17,20,21,22,23.
+h)0x18F  Done with the help of hexadecimal table for addition and subtraction.
+That would be 0+1+1+1+1+1+1+1+1+1+1+1+1= 12.
+j) True
+
+PART 2:
+
+a) ffffffff . Binary for -1  is calculated as twos complement. in twos complement, first the ones complement is taken and 1 is added to it.
+binary for 1 is 00000001 . When taken complementary we get 11111110. Then add 1 to it hence 11111111 for -1. hex for 11111111 is ffffffff.
+
+b) 1 = 0001    -1 = 1111
+   2 = 0010    -2 = 1110
+   3 = 0011    -3 = 1101
+   4 = 0100    -4 = 1100
+   5 = 0101    -5 = 1011
+   6 = 0110    -6 = 1010
+   7 = 0111    -7 = 1001
+
+c) Numbers from -2^n-1 to ((2^n-1)-1) can be representedby N bit signed integer.
+
+d) An overflow occures when an arithmetic operation attempts to create a numeric value that is too large to be represented within the available storage space.
+
+k) I got -1 as the answer using both c and python. this happens because negative is represented as 2's complement. I got the idea from the notes you provided.
+
+
